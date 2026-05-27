@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Supervivencia - Juego de Rol</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+     <!-- Trabajo integrador hecho por Elian Gregoret 2do año programación -->
+
+    <!-- HEADER -->
+    <header>
+        <h1>Guía de Supervivencia - Juego de Rol</h1>
+        <p>Aprende a jugar un sistema de rol simple inspirado en D&D "Dungeons and Dragons"</p> <br>
+
+
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#personajes">Personajes</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+            <li><a href="#combate">Combate</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- INTRO -->
+        <section id="inicio">
+            <h2>¿De qué trata esta guía?</h2>
+            <p>
+                Esta página es una guía básica para un juego de rol simplificado basado en sistemas como Dungeons & Dragons.
+                Aquí aprenderás sobre personajes, exploración, combate y mecánicas principales. <br>Este sistema tambien puede ayudarte a entender como funcionan otros juegos de rol no solo Calabozos y dragones.
+            </p>
+        </section> <br>
+
+
+        <br><br><br>
+
+
+        <!-- PERSONAJES -->
+        <section id="personajes">
+            <h2>Clases de Personajes</h2>
+
+            <article>
+                <h3>Guerrero</h3>
+                <p>Especialista en combate cuerpo a cuerpo, Alta resistencia (Defensa = 12).</p>
+                <p>(Daño = Dado de 6caras)</p>
+                <p>Alcanze del personaje "Guerrero" = 5 pies en todas direcciones</p>
+            </article>
+
+            <article>
+                <h3>Mago</h3>
+                <p>Usa hechizos poderoso, pero tiene baja defensa (Defensa = 8).</p>
+                <p> (Daño = Dado de 10 caras)</p>
+                <p>Alcanze del personaje "Mago" = 20 pies pero solo linea recta</p>
+            </article>
+
+            <article>
+                <h3>Arquero</h3>
+                <p>Ataca a distancia con gran precisión y tiene una defensa decente (Defensa = 10).</p>
+                <p>Daño = Dado de 6 caras</p>
+                <p>Alcanze del personaje "Arquero" = 20 pies pero solo linea recta</p>
+            </article>
+
+            <article>
+                <h3>Bardo</h3>
+                <p>Apoya al equipo con habilidades y buffs (Defensa = 10).</p>
+                <p>Curacion al equipo = Dado de 6 cara</p>
+                <p>Alcanze del personaje "Bardo" = 20 pies en todas direcciones</p>
+            </article>
+
+
+            <br><br>
+
+            <h3>Resumen de clases</h3>
+
+            <!-- TABLA (con th + colspan) -->
+            <table border="1">
+                <tr>
+                    <th>Clase</th>
+                    <th>Rol</th>
+                    <th>Tipo de ataque</th>
+                </tr>
+                <tr>
+                    <td>Guerrero</td>
+                    <td>Tanque</td>
+                    <td>Melee</td>
+                </tr>
+                <tr>
+                    <td>Mago</td>
+                    <td>Daño mágico</td>
+                    <td>Distancia</td>
+                </tr>
+                <tr>
+                    <td>Arquero</td>
+                    <td>Precisión</td>
+                    <td>Distancia</td>
+                </tr>
+                <tr>
+                    <td>Bardo</td>
+                    <td colspan="2">Soporte / Buffs</td>
+                </tr>
+            </table>
+        </section>
+
+        <br><br><br><br>
+
+        <!-- MAPA -->
+        <section id="mapa">
+            <h2>Mapa de Aventura</h2>
+            <p>Explora el mundo y decide tu destino.</p>
+
+            <!-- imagen del mapa-->
+            <img src="D&D Underground City map.jpg" alt="Mapa de aventura del juego" width="400">
+        </section>
+
+        <!-- COMBATE -->
+        <section id="combate">
+            <h2>Sistema de Combate</h2>
+
+            <h3>Reglas principales</h3>
+            <ul>
+                <li>El dungeon master o el guia de la partida es el que narra la historia pero tambien controla a los npc o personajes de esta misma, el narra las aventuras por las que pasan los personajes, <br> describe el lugar donde estan crea situaciones dentro de la campaña del juego y etc.
+                Siempre escucharlo en todo momento de la partida</li>
+                <li>Tratar con respeto al dungeon master y a los demas jugadores de la partida</li>
+                <li>Se usa un dado de 20 caras para ver si el ataque es superior a la defensa del enemigo</li>
+                <li>Se usa un dado de 6, 8 o 10 caras (d6,d8 o d10) para ataques.</li>
+                <li>Se usa un dado de 20 caras (d20) para decisiones e interacciones, es decir que tan bien salio tu accion ejemplo:<br>Quiero mentirle a vendedor ambulante sobre que mis 2 monedas de oro valen para comprar al menos 4 caballos a ver si se lo cree, <br> supongamos que tiro el dado y si sale un numero inferior a 10 el mercader no se lo cree pero si sale un 11 o superior lo acepta y me compro los 4 caballos</li>
+                <li>Para recuperarse de un combate o una herida de una aventura o etc, los persnajes deben estar en una taberna y descansar 1 dia</li>
+            </ul>
+
+            <h3>Ejemplo de combate</h3>
+            <ol>
+                <li>El jugador lanza un d20 y sale el numero 15 si 15 es superior a la defensa del enemigo el ataque se efectua,
+                     y se lanza un dado de daño para ver cuanto le pegas al rival, <br> si el ataque no sobrepasa la estadistica de defensa del enemigo entonces el ataque falla</li>
+                <li>El juegador lanza un dadod de 6 caras y sale 4, entonces el enemigo recibe 4 de daño y reduce su vida</li>
+                <li>El valor mayor hace daño.</li>
+            </ol>
+
+            <h3>Sistema de movimiento en combate</h3>
+            <ol>
+                <li>El jugador tiene 30 pies o pasos de movilidad</li>
+                <li>Cada cuadrado o casilla en la imagen del tablero son 5 pies de movimiento, por lo tanto el personaje del jugado solo puede moverser hasta un maximo de 6 casillas</li>
+                <li>Para efectuar los ataques los personajes tienen que estar a cierto rango de alcanze, 
+                    dependiendo de si son a distancia o cuerpo a cuerpo</li>
+            </ol>
+
+            <br>
+          <section>
+            <img src="board53_dungeontablero.jpg" alt="Tablero de juego o combate" width="400">
+          </section>
+
+
+            <br><br><br>
+
+            <!-- VIDEO (iframe) -->
+            <h3>Video explicativo</h3>
+            <iframe width="400" height="250"
+    src="https://www.youtube.com/embed/ale4cC9PnOQ"
+             title="Juego de rol explicación"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+
+            <br><br>
+
+            <!-- ENLACE EXTERNO -->
+            <p>
+                Más información en este link
+                <a href="https://es.wikipedia.org/wiki/Dungeons_%26_Dragons" target="_blank">
+                    Wikipedia
+                </a>
+            </p>
+
+        </section>
+
+        <!-- ASIDE (EXTRA) -->
+        <aside>
+            <h3>Consejo</h3>
+            <p>Trabaja en equipo con tus compañeros y piensa antes de actuar, recuerda que es un juego de probabilidades pero tambien de suerte. <br>Puede que ganes un combate pero luego a lo mejor trepando un muro muy alto una sola mala tirada puede hacer que te caigas. Disfruta mucho y divierte con tus amigos</p>
+        </aside>
+
+          <br><br>
+
+        <!-- FORMULARIO -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <form>
+                <label>Nombre:</label><br>
+                <input type="text" name="nombre" required><br><br>
+
+                <label>Email:</label><br>
+                <input type="email" name="email" required><br><br>
+
+                <label>Mensaje:</label><br>
+                <textarea name="mensaje" required></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+
+    </main>
+
+    <br>
+    
+    <footer>
+        <p>Proyecto de Programación Elian - 2026</p>
+    </footer>
+
+</body>
+</html>
