@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap");
+/* Este url de aca arriba es para el google fonts que es un directorio gratuito de tipografías desarrollado por Google
+que encontre en internet para que mi sitio web cargue y muestre fuentes personalizadas y atractivas, 
+profe asi que decidi incluirlo para ver como quedaba. A mi parecer "me sirvio para bien" */
+
+/* Eso si, tuve que ver un video para aprender a utilizarlo y demas pero al final quedo :)  */
+
+
+/* Aca voy a poner Variables generales, sin mas */
+:root {
+    --color-fondo: #f6f1e7;
+    --color-superficie: #fffaf0;
+    --color-principal: #56351e;
+    --color-secundario: #8c3f2a;
+    --color-acento: #c98a2c;
+    --color-texto: #2d241b;
+    --color-borde: #e0c69d;
+    --sombra-suave: 0 10px 28px rgba(55, 35, 19, 0.14);
+    --sombra-hover: 0 16px 34px rgba(55, 35, 19, 0.24);
+    --fuente-titulos: "Cinzel", Georgia, serif;
+    --fuente-texto: "Poppins", Arial, sans-serif;
+}
+
+/* Aqui hago los Estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    line-height: 1.7;
+}
+
+img,
+iframe {
+    display: block;
+    max-width: 100%;
+    border: 0;
+}
+
+/* El Encabezado */
+header {
+    padding: 70px 24px 55px;
+    text-align: center;
+    color: #fffaf0;
+    background:
+        linear-gradient(rgba(60, 35, 19, 0.88), rgba(140, 63, 42, 0.86)),
+        url("D&D Underground City map.jpg") center/cover;
+    border-bottom: 5px solid var(--color-acento);
+    box-shadow: var(--sombra-suave);
+}
+
+header h1 {
+    margin-bottom: 14px;
+    font-family: var(--fuente-titulos);
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+header p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #f8e7ca;
+    font-size: 1.05rem;
+}
+
+/* Navegación con Flexbox */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fffaf0;
+    border-bottom: 1px solid var(--color-borde);
+    box-shadow: 0 4px 18px rgba(45, 36, 27, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: var(--color-principal);
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--color-secundario);
+    color: #fffaf0;
+    transform: translateY(-2px);
+}
+
+/* Estructura general para mi tp inetegrador*/
+main {
+    width: min(1120px, calc(100% - 32px));
+    margin: 38px auto 0;
+}
+
+main > section,
+main > aside {
+    margin-bottom: 32px;
+    padding: 30px;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 18px;
+    box-shadow: var(--sombra-suave);
+}
+
+section[id] {
+    scroll-margin-top: 86px;
+}
+
+h2,
+h3 {
+    color: var(--color-principal);
+    font-family: var(--fuente-titulos);
+    line-height: 1.25;
+}
+
+h2 {
+    margin-bottom: 18px;
+    font-size: clamp(1.6rem, 3vw, 2.35rem);
+}
+
+h3 {
+    margin: 24px 0 12px;
+    font-size: 1.35rem;
+}
+
+ul,
+ol {
+    padding-left: 24px;
+}
+
+li + li {
+    margin-top: 10px;
+}
+
+/* hasta aqui todo bien creo*/
+
+/* Tarjetas de personajes hechas con Grid */
+#personajes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+#personajes h2,
+#personajes h3:not(article h3),
+#personajes table {
+    grid-column: 1 / -1;
+}
+
+article {
+    padding: 22px;
+    background: #fff3dc;
+    border: 1px solid var(--color-borde);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(55, 35, 19, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-6px);
+}
+
+article h3 {
+    margin-top: 0;
+    color: var(--color-secundario);
+}
+
+/* Imágenes, video y tabla */
+#mapa img,
+#combate img,
+iframe {
+    width: min(100%, 680px);
+    margin: 18px auto 0;
+    border-radius: 16px;
+    box-shadow: var(--sombra-suave);
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    border: 1px solid var(--color-borde);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(55, 35, 19, 0.1);
+}
+
+th,
+td {
+    padding: 14px 16px;
+    border: 1px solid var(--color-borde);
+    text-align: left;
+}
+
+th {
+    background: var(--color-principal);
+    color: #fffaf0;
+}
+
+td {
+    background: #fff8ea;
+}
+
+/* El Aside */
+aside {
+    border-left: 8px solid var(--color-acento);
+    background: #fdf0d0;
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+/* Los Enlaces y formularios */
+main a {
+    color: var(--color-secundario);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+main a:hover {
+    color: var(--color-acento);
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    max-width: 620px;
+}
+
+label {
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    background: #fffdf8;
+    color: var(--color-texto);
+    font: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 4px rgba(201, 138, 44, 0.18);
+    outline: none;
+}
+
+/* Botón estilizado */
+input[type="submit"] {
+    width: fit-content;
+    min-width: 150px;
+    margin-top: 6px;
+    border: 0;
+    background: var(--color-secundario);
+    color: #fffaf0;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(140, 63, 42, 0.24);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: var(--color-acento);
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    margin-top: 42px;
+    padding: 28px 20px;
+    background: var(--color-principal);
+    text-align: center;
+}
+
+footer p {
+    color: #fffaf0;
+}
+
+/* aca hago el diseño Responsive para celular */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        position: static;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main > section,
+    main > aside {
+        padding: 20px;
+    }
+
+    #personajes {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}
