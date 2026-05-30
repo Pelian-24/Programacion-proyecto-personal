@@ -8,3 +8,12 @@ Consiste en una guía básica y de ayuda para un juego de rol inspirado en Calab
 
 # Nota importante:
 Tambien voy a crear un apartado de backend para asi poder tener una base de datos que me proporcione informacion de los usuarios que utilizan mi pagina, para poder recibir mails, preguntas de soporte y otros factores que influyan mas adelante.
+
+
+## Comando para ejecutar el server y demas: 
+1. En la terminal poner " cd Proyecto de Pagina web\Backend "
+2. Luego node server.js
+
+Mensaje que deberia aparecer si todo funciona adecuadamente:" Servidor funcionando en http://localhost:3000 " .
+
+3. Para cerrarlo " Ctrl + C ".
