@@ -11,9 +11,9 @@ Tambien voy a crear un apartado de backend para asi poder tener una base de dato
 
 
 ## Comando para ejecutar el server y demas: 
-1. En la terminal poner " cd Proyecto de Pagina web\Backend "
-2. Luego node server.js
+1. En la terminal poner (cd "Proyecto de Pagina web\Backend").
+2. Luego (node server.js)
 
 Mensaje que deberia aparecer si todo funciona adecuadamente:" Servidor funcionando en http://localhost:3000 " .
 
-3. Para cerrarlo " Ctrl + C ".
+3. Para cerrarlo el servidor " Ctrl + C " en la terminal.
