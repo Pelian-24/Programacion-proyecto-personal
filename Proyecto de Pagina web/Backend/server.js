@@ -1,10 +1,11 @@
-const express = require("express");
+﻿const express = require("express");
 const fs = require("fs");
 const path = require("path");
 
 const app = express();
 const PORT = 3000;
 
+app.use(express.static(path.join(__dirname, "..")));
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/contacto", (req, res) => {
@@ -37,7 +38,7 @@ app.post("/contacto", (req, res) => {
     res.send(`
         <h1>Mensaje enviado correctamente</h1>
         <p>Gracias por contactarte, ${nombre}.</p>
-        <a href="/">Volver al inicio</a>
+        <a href="/index.html">Volver al inicio</a>
     `);
 });
 
