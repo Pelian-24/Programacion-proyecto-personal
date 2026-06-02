@@ -58,11 +58,18 @@ header {
     box-shadow: var(--sombra-suave);
 }
 
+
+/* Este comando aplica estilos responsivos al título principal (<h1>) que está dentro de un contenedor <header>. 
+Hace que el texto crezca o disminuya fluidamente dependiendo del tamaño de la pantalla, 
+limita su tamaño máximo y mínimo, y ajusta la fuente y el margen inferior. */
+
 header h1 {
     margin-bottom: 14px;
     font-family: var(--fuente-titulos);
     font-size: clamp(2rem, 5vw, 4rem);
 }
+
+
 
 header p {
     max-width: 760px;
