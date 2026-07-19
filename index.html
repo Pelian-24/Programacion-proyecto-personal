@@ -22,6 +22,7 @@
     <nav>
         <!-- BOTÓN HAMBURGUESA (Solo visible en móviles) -->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div class="theme-toggle" onclick="toggleTheme()" id="theme-toggle" title="Cambiar tema">☀️</div>
         <ul id="nav-menu">
             <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
             <li><a href="#personajes" onclick="closeMenu()">Personajes</a></li>
@@ -210,7 +211,7 @@
         <section id="contacto">
             <h2>Contacto</h2>
 
-            <form action="https://formspree.io/f/xgoqjgkw" method="POST">
+            <form action="/contacto" method="POST" id="contact-form" onsubmit="return validarFormulario(event)">
     <label>Nombre:</label><br>
     <input type="text" name="nombre" required><br><br>
 
@@ -220,6 +221,7 @@
     <label>Mensaje:</label><br>
     <textarea name="mensaje" required></textarea><br><br>
 
+    <span id="form-error" style="color: #d26a4f; font-size: 0.95rem; display: none; font-weight: bold; margin-bottom: 10px;"></span>
     <input type="submit" value="Enviar">
 </form>
         </section>

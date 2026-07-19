@@ -30,10 +30,13 @@ Desarrollar una página web que sirva de guía básica para un juego de rol insp
    > 🤖 Asistido por: Elian (Trabajo previo) | Fecha: Anterior al 18/07/2026
 ### Fase 2 — Backend y conectividad
 - ✅ [COMPLETADO] Crear servidor con Express para servir archivos estáticos y endpoint POST /contacto.
-- 🔄 [EN PROGRESO] Conectar el formulario `index.html` con la ruta local de Express (actualmente usa Formspree).
-   > [Modificado: 18/07/2026 — 20:55]
+- ✅ [COMPLETADO] Conectar el formulario `index.html` con la ruta local de Express (se removió Formspree).
+   > [Modificado: 18/07/2026 — 21:31]
 ### Fase 3 — Lógica Frontend
-- ⬜ [PENDIENTE] Definir e implementar interactividad en `script.js`.
+- ✅ [COMPLETADO] Implementar Modo Oscuro/Claro estructurado con variables CSS y botón de toggle.
+   > [Modificado: 18/07/2026 — 21:38]
+- ✅ [COMPLETADO] Implementar validación local del formulario de contacto para prevenir envíos vacíos o erróneos.
+   > [Modificado: 18/07/2026 — 21:38]
 
 ## 8. Notas y Observaciones
 - Proyecto preexistente adaptado exitosamente al Flujo de Trabajo v2.0.
