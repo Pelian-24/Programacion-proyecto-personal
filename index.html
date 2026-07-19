@@ -20,12 +20,14 @@
 
 
     <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#personajes">Personajes</a></li>
-            <li><a href="#mapa">Mapa</a></li>
-            <li><a href="#combate">Combate</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+        <!-- BOTÓN HAMBURGUESA (Solo visible en móviles) -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul id="nav-menu">
+            <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+            <li><a href="#personajes" onclick="closeMenu()">Personajes</a></li>
+            <li><a href="#mapa" onclick="closeMenu()">Mapa</a></li>
+            <li><a href="#combate" onclick="closeMenu()">Combate</a></li>
+            <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
         </ul>
     </nav>
 
@@ -186,6 +188,20 @@
         <aside>
             <h3>Consejo</h3>
             <p>Trabaja en equipo con tus compañeros y piensa antes de actuar, recuerda que es un juego de probabilidades pero tambien de suerte. <br>Puede que ganes un combate pero luego a lo mejor trepando un muro muy alto una sola mala tirada puede hacer que te caigas. Disfruta mucho y divierte con tus amigos</p>
+            
+            <hr style="margin: 20px 0; border: 1px solid var(--color-borde);">
+
+            <!-- LANZADOR DE DADOS: Widget interactivo con JavaScript -->
+            <div id="dice-roller">
+                <h3>Lanzador de Dados</h3>
+                <p>Prueba tu suerte antes de la aventura:</p>
+                <div class="dice-buttons">
+                    <button onclick="rollDice(20)">d20</button>
+                    <button onclick="rollDice(10)">d10</button>
+                    <button onclick="rollDice(6)">d6</button>
+                </div>
+                <div id="dice-result" class="dice-result">-</div>
+            </div>
         </aside>
 
           <br><br>
@@ -216,5 +232,7 @@
         <p>Proyecto de Programación Elian - 2026</p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>

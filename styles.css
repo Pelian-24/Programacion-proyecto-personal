@@ -88,6 +88,17 @@ nav {
     box-shadow: 0 4px 18px rgba(45, 36, 27, 0.1);
 }
 
+/* Menú Hamburguesa - Oculto por defecto en PC */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--color-principal);
+    cursor: pointer;
+    text-align: right;
+    padding: 10px 20px;
+    user-select: none;
+}
+
 nav ul {
     display: flex;
     align-items: center;
@@ -323,6 +334,67 @@ footer p {
     color: #fffaf0;
 }
 
+/* --- LANZADOR DE DADOS --- */
+#dice-roller {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dice-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.dice-buttons button {
+    background: var(--color-principal);
+    color: var(--color-superficie);
+    border: 2px solid var(--color-borde);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.dice-buttons button:hover {
+    background: var(--color-acento);
+    transform: translateY(-2px);
+}
+
+.dice-result {
+    font-family: var(--fuente-titulos);
+    font-size: 3.5rem;
+    color: var(--color-secundario);
+    font-weight: bold;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fffdf8;
+    border: 2px dashed var(--color-borde);
+    border-radius: 12px;
+    margin: 0 auto;
+    width: 100px;
+}
+
+/* ANIMACIÓN: Efecto de temblor mientras rueda el dado */
+.rolling {
+    animation: shake 0.4s ease-in-out infinite;
+    color: var(--color-acento);
+}
+
+@keyframes shake {
+    0% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-4px) rotate(-5deg); }
+    50% { transform: translateX(4px) rotate(5deg); }
+    75% { transform: translateX(-4px) rotate(-5deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
+
 /* aca hago el diseño Responsive para celular */
 @media (max-width: 480px) {
     header h1 {
@@ -333,9 +405,20 @@ footer p {
         position: static;
     }
 
+    .menu-toggle {
+        display: block; /* Muestra el icono en celular */
+    }
+
     nav ul {
         flex-direction: column;
         align-items: stretch;
+        display: none; /* Oculta los enlaces por defecto */
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    nav ul.nav-active {
+        display: flex; /* Se muestran cuando está activo */
     }
 
     nav a {
