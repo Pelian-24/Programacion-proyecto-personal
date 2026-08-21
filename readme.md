@@ -1,22 +1,15 @@
-Hola mundo, como estan
-
 # Guía de pryoecto personal - Juego de Rol
 
 ## Descripción
 
 Este proyecto es una página web desarrollada desarrollada por mi como un trabajo de Programación personal.
 
-Consiste en una guía básica y de ayuda para un juego de rol inspirado en Calabozos y Dragones (Dungeons & Dragons) pero basado en el universo de Harry Poter y la magia, donde se explican las mecánicas principales del juego, los tipos de personajes, el sistema de combate, la exploración y la interaccion con el mundo y personajes o criaturas.
+Consiste en una guía básica y de ayuda para un juego de rol inspirado en Calabozos y Dragones (Dungeons & Dragons).
 
-# Nota importante:
-Tambien voy a crear un apartado de backend para asi poder tener una base de datos que me proporcione informacion de los usuarios que utilizan mi pagina, para poder recibir mails, preguntas de soporte y otros factores que influyan mas adelante.
+El objetivo de este proyecto es simple:
 
+# 1. Ayudar a las personas a entender de manera basica como funciona este tipos de juegos de mesa
 
+# 2. Explicar los pasos que se deben de realizar en una partida normal con amigos o otras personas con las que jueges.
 
-## Comando para ejecutar el server y demas: 
-1. En la terminal poner (cd "Proyecto de Pagina web\Backend").
-2. Luego (node server.js)
-
-Mensaje que deberia aparecer si todo funciona adecuadamente:" Servidor funcionando en http://localhost:3000 " .
-
-3. Para cerrarlo el servidor " Ctrl + C " en la terminal.
+# 3. Dar a entender conceptos basicos en cuanto a las reglas del juego y ejemplos faciles de captar para que las personas comprendan la idea base del juego y se animen a probarlo.
